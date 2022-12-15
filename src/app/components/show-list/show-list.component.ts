@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Show } from '../../mode1/show';
+import { ShowDataService} from '../../services/show-data.service';
 
 @Component({
   selector: 'app-show-list',
@@ -7,8 +8,8 @@ import { Show } from '../../mode1/show';
   styleUrls: ['./show-list.component.css']
 })
 export class ShowListComponent implements OnInit {
-  shows: Show[ ] = [ ];
-  constructor(){this.shows.push(new Show(1, 'Paw Patrol'));}
+  
+  constructor(private showDataService: ShowDataService){}
   
   
   ngOnInit() {
