@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Show } from '../../model/show';
 
 @Injectable()
 export class ShowDataService {
