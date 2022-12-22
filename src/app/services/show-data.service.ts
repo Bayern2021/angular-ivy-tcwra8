@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Show } from '../../mode1/show';
+import { Show } from '../../model/show';
 
 @Injectable()
 export class ShowDataService {
