@@ -4,6 +4,8 @@ import { Show } from '../model/show';
 @Injectable()
 export class ShowDataService {
   shows: Show[] =  [];
-  constructor() {this.shows.push(new Show(1, 'Paw Patrol'));}
+  constructor() {
+    this.shows.push(new Show(1, 'Paw Patrol'));
+  }
 
 }
