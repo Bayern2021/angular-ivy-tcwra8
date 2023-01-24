@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Show } from '../../model/show';
 
 @Component({
   selector: 'app-show-form',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show-form.component.css']
 })
 export class ShowFormComponent implements OnInit {
-
-  constructor() { }
+   show : Show ;
+   constructor() {
+    this.show = new Show(null, null);
+    
+   }
 
   ngOnInit() {
   }
