@@ -8,5 +8,8 @@ export class ShowDataService {
     this.shows.push(new Show(1, 'Paw Patrol'));
     this.shows.push(new Show(2, 'How I learn Typescript'));
   }
+  saveShow(show: Show) {
+    this.shows.push(show);
+  }
 
 }

@@ -6,10 +6,10 @@
   </div>
   <div class="mb-2" >
     <label class="form-label" for="newShowTitel">Titel:</label>
-    <input class="form-control" type="text" id="newShowTitel" name="newShowTitel"   placeholder="Hier den Titel der Serie eingeben !"> 
+    <input class="form-control" type="text" id="newShowTitel" name="newShowTitel" [(ngModel)]= "show.title"  placeholder="Hier den Titel der Serie eingeben !"> 
     </div>
     <div class="mb-2" >
-      <button class="btn btn-primary btn-lg" type="submit" >
+      <button class="btn btn-primary btn-lg" type="submit" (click)="save()" >
         absenden
       </button>
     </div>
