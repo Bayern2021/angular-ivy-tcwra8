@@ -6,9 +6,19 @@
   </tr>
 </thead>
 <tbody>
-  <tr *ngFor="let s of shows">
-  <td>{{s.id}} </td>
-  <td>{{s.title}} &nbsp;</td>
-  </tr>
+<ng-container *ngFor="let s of shows">
+<tr>
+<td>{{s.id}} </td>
+<td>{{s.title}} </td>
+<button class="material-icons" type="button" >edit</button>
+<button class="material-icons" type="button">delete</button>
+</tr>
+<tr>
+  <td><input class="form-control" type="number" id="newShowID" name="newShowID" [(ngModel)]="show.id"></td>
+  <td><input class="form-control" type="text" id="newShowTitel" name="newShowTitel" [(ngModel)]= "show.title"></td>
+  <td colspan="2"><button class="btn btn-primary btn-lg" type="submit" (click)="save()" >
+  absenden</button></td>
+</tr>
+</ng-container>
 </tbody>
 </table>
