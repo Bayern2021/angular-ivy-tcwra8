@@ -11,6 +11,9 @@ export class ShowDataService {
   saveShow(show: Show) {
     this.shows.push(show);
   }
+  deleteShow(show: Show) {
+    this.shows = this.shows.filter(s => s !== show);
+  }
   
 
 }
