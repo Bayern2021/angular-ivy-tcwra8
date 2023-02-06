@@ -28,7 +28,7 @@ export class ShowListComponent implements OnInit {
     }
   }
   saveEdit(){
-    this.editShow == null;
+    this.editShow = null;
   }
   delete(show: Show){
     this.showDataService.deleteShow(show);

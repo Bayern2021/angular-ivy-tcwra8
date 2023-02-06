@@ -3,6 +3,8 @@
   <tr>
     <th>ID &nbsp;</th>
     <th>Serientitel &nbsp;</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
   </tr>
 </thead>
 <tbody>
@@ -10,8 +12,13 @@
 <tr *ngIf="!toEdit(s)">
 <td>{{s.id}} </td>
 <td>{{s.title}} </td>
-<button class="material-icons" type="button" (click)="edit(s)"> edit</button>
-<button class="material-icons" type="button" (click)="delete(s)">delete</button>
+<td><button class="material-icons" type="submit" (click)="edit(s)"> edit</button></td>
+<td><button class="material-icons" type="submit" (click)="delete(s)">delete</button></td>
+</tr>
+<tr *ngIf="toEdit(s)" >
+  <td><input class="form-control" type="number" id="newShowID" name="newShowID" [(ngModel)]="editShow.id"></td>
+  <td><input class="form-control" type="text" id="newShowTitel" name="newShowTitel" [(ngModel)]= "editShow.title"></td>
+  <td colspan="2"><button class="material-icons" type="submit" (click)="saveEdit()">save</button></td>
 </tr>
 </ng-container>
 </tbody>
